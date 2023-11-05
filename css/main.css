@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Century Gothic";
+  font-weight: bold;
+  font-style: normal;
+  src: url("fonts/GOTHICB0.ttf.woff") format("woff"), url("fonts/GOTHICB0.ttf.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Century Gothic";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/GOTHIC.ttf.woff") format("woff"), url("fonts/GOTHIC.ttf.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../montserrat-regular.ttf.woff") format("woff"), url("../montserrat-regular.ttf.woff2") format("woff2");
+}
+head {
+  font-family: "Century Gothic", sans-serif;
+}
+
+body {
+  font-family: "Century Gothic", sans-serif;
+}/*# sourceMappingURL=main.css.map */
