@@ -7,6 +7,8 @@
     <title>Sonic Zen</title>
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 
 <body>
@@ -14,23 +16,23 @@
 
     <header class="grid-con">
         <h2 class="hidden"> Desktop Header </h2>
-        <div class="desktop l-col-span-5 xl-col-span-5 menubox">
+        <div class="desktop l-col-span-5 xl-col-span-5 box">
             Overview button that will jump to info section
         </div>
 
-        <div class="desktop l-col-span-2 xl-col-span-2 menubox">
+        <div class="desktop l-col-span-2 xl-col-span-2 box">
             Welcome to the world of sound
         </div>
 
-        <div class="desktop l-col-span-5 xl-col-span-5 menubox">
+        <div class="desktop l-col-span-5 xl-col-span-5 box">
             Product section that will jump to variant and buy now section
         </div>
     </header>
 
     <header class="grid-con">
         <h2 class="hidden">Mobile Nav</h2>
-        <div class="mobile col-span-1 menubox"> Welcome </div>
-        <div class="mobile col-start-4 col-end-5 menubox menu-open"> Image Icon for dropdown</div>
+        <div class="mobile col-span-1 box"> Welcome </div>
+        <div class="mobile col-start-4 col-end-5 menu-open"> Image Icon for dropdown</div>
 
         <div class="mobile col-span-1 box ham">
             <div class="menu-close"> Image Icon for menu close</div>
@@ -51,21 +53,89 @@
         <section class="grid-con">
             <h2 class="hidden">Intro </h2>
             <div class="col-span-4 l-col-span-12 xl-col-span-12 box"> Hero Image with Brand Name and the video scroll
-                starts <img src="images/brand.jpg" alt="temp_img"> </div>
+                starts </div>
             <div class="col-span-4 l-col-span-12 xl-col-span-12 box"> the video assets slides over to the right and the
                 description info floats in from left (origin) </div>
             <div class="col-span-4 l-col-span-12 xl-col-span-12 box"> the video assets slides over to the left and more
-                info floats in from right (features) <img src="images/features.jpg" alt="temp_img"></div>
+                info floats in from right (features) </div>
             <div class="col-span-4 l-col-span-12 xl-col-span-12 box"> the video assets arranges in center with name
                 (function)</div>
+
+            <div class="col-span-12 box">
+                <canvas id="explode-view"></canvas>
+            </div>
 
         </section>
 
 
         <section class="grid-con">
             <h2 class="hidden">Model viewer </h2>
-            <div class="col-span-4 l-col-span-6 xl-col-span-6 box"> Model viewer
-                <img src="images/model.jpg" alt="temp_img">
+            <div class="col-span-4 l-col-span-6 xl-col-span-6 box">
+
+
+                <model-viewer class="grid-con" id="model" src="model/sonic_zen.glb" ar
+                    ar-modes="webxr scene-viewer quick-look" camera-controls poster="images/brand.jpg"
+                    shadow-intensity="2" shadow-softness="1" environment-image="images/pillars_1k.hdr" exposure="1.7"
+                    camera-orbit="52.34deg 88.29deg 874.8m" field-of-view="20deg">
+
+                    <div class="Hotspot" slot="hotspot-1"
+                        data-position="0.23369406397572956m 0.7983508252983297m -0.5040265088779172m"
+                        data-normal="0.5285265470512426m -0.0550742287304356m 0.8471283954583497m"
+                        data-visibility-attribute="visible">
+                        <div class="HotspotAnnotation" id="hotspot-1"></div>
+                    </div>
+
+                    <div class="Hotspot" slot="hotspot-2"
+                        data-position="0.1292598457825607m -0.5568223088106271m -0.4126381615776568m"
+                        data-normal="0.666005046102283m -0.08014482071757606m 0.7416293456157488m"
+                        data-visibility-attribute="visible">
+                        <div class="HotspotAnnotation" id="hotspot-2"></div>
+                    </div>
+
+                    <div class="Hotspot" slot="hotspot-3"
+                        data-position="-2.242264002340827m 0.9564809966705226m -1.969812043961042m"
+                        data-normal="-0.6050599133154172m 0.46832315632891786m -0.6438757042666388m"
+                        data-visibility-attribute="visible">
+                        <div class="HotspotAnnotation" id="hotspot-3"></div>
+                    </div>
+
+                    <div class="Hotspot" slot="hotspot-4"
+                        data-position="-0.03656893271771747m 1.1355287713774256m -2.7103211311350943m"
+                        data-normal="0.18879859387814174m -0.1448991562601412m -0.9712668662446668m"
+                        data-visibility-attribute="visible">
+                        <div class="HotspotAnnotation" id="hotspot-4"></div>
+                    </div>
+
+                    <div class="Hotspot" slot="hotspot-5"
+                        data-position="-0.10505942275494909m -0.25581659319641314m -0.9885916394812941m"
+                        data-normal="0.8178584674804928m -0.31755423676904626m 0.47986126524287015m"
+                        data-visibility-attribute="visible">
+                        <div class="HotspotAnnotation" id="hotspot-5"></div>
+                    </div>
+
+                    <div class="Hotspot" slot="hotspot-6"
+                        data-position="0.307046324371756m 1.4074306392933007m -0.4991781754676794m"
+                        data-normal="0.5223098712236517m -0.045862247554492905m 0.8515216102199537m"
+                        data-visibility-attribute="visible">
+                        <div class="HotspotAnnotation" id="hotspot-6"></div>
+                    </div>
+
+                    <div class="Hotspot" slot="hotspot-7"
+                        data-position="-0.12018539611584195m 1.9471653628269225m -1.8562967380968223m"
+                        data-normal="0.13341566947598105m 0.9822758109293792m 0.13166051192861986m"
+                        data-visibility-attribute="visible">
+                        <div class="HotspotAnnotation" id="hotspot-7"></div>
+                    </div>
+                    <!-- <div class="progress-bar hide" slot="progress-bar"> <div class="update-bar"></div></div> -->
+
+                    <button slot="ar-button" id="ar-button">View in your space</button>
+
+                    <div id="ar-prompt">
+                        <img src="images/ar_hand_prompt.png" alt="ar img">
+                    </div>
+
+                </model-viewer>
+
             </div>
             <div class="col-span-4 l-col-span-6 xl-col-span-6 box"> Description</div>
         </section>
@@ -73,58 +143,64 @@
         <section class="grid-con">
             <h2 class="hidden">x-ray </h2>
             <div class="col-span-4 l-col-span-6 xl-col-span-6 box"> Description </div>
-            <div class="col-span-4 l-col-span-6 xl-col-span-6 box">X- ray <img src="images/xray.jpg" alt="temp_img">
+            <div class="col-span-4 l-col-span-6 xl-col-span-6 box">
+
+                <!-- 
+                <div id="mobile-tablet-view">
+                    <img src="images/earbud-x-ray.jpg" alt="X ray view of ear bud">
+                    <img src="images/earbud.jpg" alt="Regular view of ear bud">
+                </div> -->
+                <div id="outerShell">
+                    <div id="imageCon">
+                        <div class="slideImage image-right"></div> <!-- wire version -->
+                        <div class="slideImage image-left"></div> <!-- actual earbuds -->
+                        <div class="slideImage image-drag"></div> <!-- div to create black bar -->
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="grid-con">
             <h2 class="hidden">video </h2>
             <div class="col-span-4 l-col-span-12 xl-col-span-12 box"> gif / loop video with motion graphics / play or
-                pause function <img src="images/video.jpg" alt="temp_img"></div>
+                pause function</div>
         </section>
 
         <section class="grid-con">
             <h2 class="hidden">Viewport images</h2>
-            <div class="col-span-2 l-col-span-3 xl-col-span-3 box"> Image with different viewport <img
-                    src="images/viewport.jpg" alt="temp_img"> </div>
-            <div class="col-span-2 l-col-span-3 xl-col-span-3 box"> Image with different viewport <img
-                    src="images/viewport.jpg" alt="temp_img"></div>
-            <div class="col-span-2 l-col-span-3 xl-col-span-3 box"> Image with different viewport <img
-                    src="images/viewport.jpg" alt="temp_img"></div>
-            <div class="col-span-2 l-col-span-3 xl-col-span-3 box"> Image with different viewport <img
-                    src="images/viewport.jpg" alt="temp_img"></div>
+            <div class="col-span-2 l-col-span-3 xl-col-span-3 box"> Image with different viewport </div>
+            <div class="col-span-2 l-col-span-3 xl-col-span-3 box"> Image with different viewport </div>
+            <div class="col-span-2 l-col-span-3 xl-col-span-3 box"> Image with different viewport </div>
+            <div class="col-span-2 l-col-span-3 xl-col-span-3 box"> Image with different viewport </div>
         </section>
 
         <section class="grid-con">
             <h2 class="hidden">Comparison</h2>
             <div class="col-span-4 l-col-span-4 xl-col-span-4 box"> comparative feature description
-                <img src="images/comparison.jpg" alt="temp_img">
+
             </div>
             <div class="col-span-4 l-col-span-4 xl-col-span-4 box"> comparative feature description
-                <img src="images/comparison.jpg" alt="temp_img">
+
             </div>
             <div class="col-span-4 l-col-span-4 xl-col-span-4 box"> comparative feature description
-                <img src="images/comparison.jpg" alt="temp_img">
+
             </div>
         </section>
 
         <section class="grid-con">
             <h2 class="hidden">Color variant</h2>
-            <div class="col-span-4 l-col-span-5 xl-col-span-5 box"> variants of color <img src="images/variants.jpeg"
-                    alt="temp_img">
+            <div class="col-span-4 l-col-span-5 xl-col-span-5 box"> variants of color
             </div>
             <div class="col-span-4 l-col-span-2 xl-col-span-2 box"> description</div>
-            <div class="col-span-4 l-col-span-5 xl-col-span-5 box"> variants of color <img src="images/variants.jpeg"
-                    alt="temp_img"></div>
+            <div class="col-span-4 l-col-span-5 xl-col-span-5 box"> variants of color</div>
         </section>
 
 
         <section class="grid-con">
             <h2 class="hidden">Buy now </h2>
-            <div class="col-span-2 l-col-span-6 xl-col-span-6 box"> mock up with phone device and <img
-                    src="images/mockup.jpeg" alt="temp_img"> </div>
+            <div class="col-span-2 l-col-span-6 xl-col-span-6 box"> mock up with phone device and </div>
             <div class="col-span-2 l-col-span-6 xl-col-span-6 box"> some promo text on scroll reveal</div>
-            <div class="col-span-4 l-col-start-4 l-col-end-10 xl-col-start-4 xl-col-end-10 menubox"> Buy Now Button
+            <div class="col-span-4 l-col-start-4 l-col-end-10 xl-col-start-4 xl-col-end-10 box"> Buy Now Button
             </div>
         </section>
     </main>
@@ -132,9 +208,12 @@
 
     <footer class="grid-con">
         <h2 class="hidden"> Footer </h2>
-        <div class="col-span-4 l-col-span-12 xl-col-span-12 menubox"> footer image</div>
+        <div class="col-span-4 l-col-span-12 xl-col-span-12 box"> footer image</div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

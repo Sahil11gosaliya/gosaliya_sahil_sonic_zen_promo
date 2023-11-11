@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 314 318">
+  <defs>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3"/>
+      <feGaussianBlur result="blur" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3"/>
+      <feGaussianBlur result="blur-2" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-3" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3"/>
+      <feGaussianBlur result="blur-3" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur-3" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path d="m12.63,155.14C13.09,76.26,76.59,12.03,153.47,12.68c79.63.68,142.52,65.43,141.52,145.71-.96,77.04-65.01,140.92-141.15,140.77-78.32-.16-141.67-64.77-141.21-144.03Zm266.4-3.44c5.74-44.58-32.31-99.37-83.94-117.64-52.31-18.52-115.99,1.9-141.46,45.72,5.13,7.25,21.14,12.7,4.93,24.86-5.25-2.03-10.71-4.14-19.4-7.49-4.62,16.68-8.97,32.36-13.47,48.6,8.87,2.23,14.61,3.68,21.09,5.31.93,46.48,22.12,80.84,61.52,102.85-2.05,7.1-3.67,12.73-5.68,19.71,7.93,2.93,14.91,5.51,22.31,8.25,3.25-7.66,5.75-13.55,7.8-18.36h38.74c2.31,6.49,4.27,12,6.15,17.27,49.62-5.85,97.15-55.55,99.22-100.61-6.36-5.4-11.67-9.91-16.98-14.42,5.9-4.32,11.8-8.63,19.2-14.04Z" style="fill: #fff; filter: url(#drop-shadow-1); stroke: #ededed; stroke-miterlimit: 10;"/>
+  <path d="m154.18,230.16c-40.55.15-73.31-32.46-73.73-73.38-.42-41.17,31.82-74.93,71.84-75.22,41.61-.3,74.39,32.23,74.78,74.21.38,40.31-32.87,74.24-72.89,74.39Zm-.72-143.58c-38.02.42-68.49,31.45-68.37,69.62.12,38.79,32.15,70.25,70.58,69.32,37.39-.9,66.72-32.67,66.15-71.65-.55-37.47-31.27-67.7-68.36-67.29Z" style="fill: #fff; filter: url(#drop-shadow-2); stroke: #ededed; stroke-miterlimit: 10;"/>
+  <path d="m153.59,203.3c-25.34.13-47.17-21.95-46.95-47.48.23-26.05,21.52-47.5,47.04-47.39,26.02.11,46.74,21.26,46.5,47.45-.25,26.61-20.56,47.28-46.59,47.42Z" style="fill: #fff; filter: url(#drop-shadow-3); stroke: #ededed; stroke-miterlimit: 10;"/>
+</svg>
