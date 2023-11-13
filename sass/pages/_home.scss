@@ -1,0 +1,81 @@
+
+
+header, footer, body {
+    background-color: rgba(255, 255, 255, 0.951);
+    font-size: 35px;
+}
+
+p,h2,h3,h4,h4,h6 {
+    text-align: left;
+}
+
+header, footer, body p,a {
+    font-size: 20px;
+}
+
+header h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+img{
+
+    width: 100%;
+    height: auto;
+
+  }
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.button:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+
+a {
+   
+    text-decoration: none;
+    outline: none; /* Optional: to remove the hyperlink highlight */
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+
+.hammenu {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.menu-close img {
+    display: none;
+}
+
+
+@media only screen and (max-width: 767px) {
+   
+    .menu-open img,
+    .menu-close img {
+        height: 30px; 
+        width: 30px;
+    }
+}
+
+
+body {
+    scroll-behavior: smooth;
+}

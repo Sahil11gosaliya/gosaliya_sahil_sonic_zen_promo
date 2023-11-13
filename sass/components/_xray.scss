@@ -1,15 +1,7 @@
 
-
-  // #outerShell{
-  //     display: block;
-  //     max-width: 1200px;
-  //     margin: auto;
-  //     border: solid 1px #666;
-  //   }
-    
     #imageCon {
       position: relative;
-      max-width: auto;
+      max-width: 100%;
       height: 90vh;
     }
     
@@ -17,9 +9,10 @@
       position: absolute; /*images are stacked in order via absolute*/
        left: 0;
         right: 0;
-      height: 90vh;
+        max-width: 100%;
+        height: 90vh;
     }
-    
+
     .image-right {
       background: url(../images/xray.jpg) no-repeat;
       background-size: cover;
@@ -36,9 +29,11 @@
     }
     
     .image-drag {
-      background-color: #666;
+      background-color: #666666;
       left: 50%; /*match up with image left*/
       width: 4px; /*orig 49*/
       cursor: pointer;
     }
+  
+
   

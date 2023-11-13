@@ -3,12 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonic Zen</title>
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+
 </head>
 
 <body>
@@ -16,35 +18,40 @@
 
     <header class="grid-con">
         <h2 class="hidden"> Desktop Header </h2>
-        <div class="desktop l-col-span-5 xl-col-span-5 box">
-            Overview button that will jump to info section
+        <div class="desktop tablet m-col-span-4 l-col-span-4 xl-col-span-4 box">
+            <h3><a href="#overview">Overview</a></h3>
         </div>
 
-        <div class="desktop l-col-span-2 xl-col-span-2 box">
-            Welcome to the world of sound
+        <div class="desktop tablet m-col-span-4 l-col-span-4 xl-col-span-4 box">
+            <h3> SONICZEN WELCOMES </h3>
         </div>
 
-        <div class="desktop l-col-span-5 xl-col-span-5 box">
-            Product section that will jump to variant and buy now section
+        <div class="desktop tablet m-col-span-4 l-col-span-4 xl-col-span-4 box">
+            <h3><a href="#buy">Purchase</a></h3>
         </div>
     </header>
 
     <header class="grid-con">
         <h2 class="hidden">Mobile Nav</h2>
-        <div class="mobile col-span-1 box"> Welcome </div>
-        <div class="mobile col-start-4 col-end-5 menu-open"> Image Icon for dropdown</div>
-
-        <div class="mobile col-span-1 box ham">
-            <div class="menu-close"> Image Icon for menu close</div>
-            <nav>
-                <ul class="hammenu">
-                    <li> <a href="index.html">Overview</a> </li>
-                    <li> <a href="about.html">Specs and Buy now</a> </li>
-                </ul>
-            </nav>
-
+        <div class="mobile col-span-2 box">
+            <h4>Welcome</h4>
+        </div>
+        <div class="mobile col-start-4 col-end-5 menu-open">
+            <img src="images/drop.png" alt="dropdown">
         </div>
 
+
+        <div class="mobile col-span-3 box ham">
+            <nav>
+                <ul class="hammenu">
+                    <li> <a href="#overview">Overview</a> </li>
+                    <li> <a href="#buy">Purchase</a> </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile col-start-4 col-end-5 menu-close ham">
+            <img src="images/close.png" alt="close">
+        </div>
     </header>
 
 
@@ -52,16 +59,10 @@
     <main>
         <section class="grid-con">
             <h2 class="hidden">Intro </h2>
-            <div class="col-span-4 l-col-span-12 xl-col-span-12 box"> Hero Image with Brand Name and the video scroll
-                starts </div>
-            <div class="col-span-4 l-col-span-12 xl-col-span-12 box"> the video assets slides over to the right and the
-                description info floats in from left (origin) </div>
-            <div class="col-span-4 l-col-span-12 xl-col-span-12 box"> the video assets slides over to the left and more
-                info floats in from right (features) </div>
-            <div class="col-span-4 l-col-span-12 xl-col-span-12 box"> the video assets arranges in center with name
-                (function)</div>
-
-            <div class="col-span-12 box">
+            <div class="mobile col-span-4 box">
+                <img src="images/normal.jpg" alt="hero image">
+            </div>
+            <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box">
                 <canvas id="explode-view"></canvas>
             </div>
 
@@ -70,7 +71,7 @@
 
         <section class="grid-con">
             <h2 class="hidden">Model viewer </h2>
-            <div class="col-span-4 l-col-span-6 xl-col-span-6 box">
+            <div class="col-span-4 m-col-span-9 l-col-span-9 xl-col-span-9 box">
 
 
                 <model-viewer class="grid-con" id="model" src="model/sonic_zen.glb" ar
@@ -137,19 +138,22 @@
                 </model-viewer>
 
             </div>
-            <div class="col-span-4 l-col-span-6 xl-col-span-6 box"> Description</div>
+            <div class="col-span-4 m-col-span-3 l-col-span-3 xl-col-span-3 box">
+
+                <h3> Explore our AR object effortlessly </h3>
+                <p> Hover for details, move to discover different angles, and double-hover for surprises! Experiment
+                    with gestures, scroll for changes, and enjoy the interactive experience on mouse click. Have fun
+                    exploring!</p>
+            </div>
         </section>
 
         <section class="grid-con">
             <h2 class="hidden">x-ray </h2>
-            <div class="col-span-4 l-col-span-6 xl-col-span-6 box"> Description </div>
-            <div class="col-span-4 l-col-span-6 xl-col-span-6 box">
-
-                <!-- 
-                <div id="mobile-tablet-view">
-                    <img src="images/earbud-x-ray.jpg" alt="X ray view of ear bud">
-                    <img src="images/earbud.jpg" alt="Regular view of ear bud">
-                </div> -->
+            <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box">
+                <h3> X Ray Vision</h3>
+                <p>Experiment with the slider, discover hidden layers, and enjoy the interactive X-ray experience!</p>
+            </div>
+            <div class="tablet desktop m-col-span-12 l-col-span-12 xl-col-span-12 box">
                 <div id="outerShell">
                     <div id="imageCon">
                         <div class="slideImage image-right"></div> <!-- wire version -->
@@ -158,59 +162,125 @@
                     </div>
                 </div>
             </div>
+
+            <div class="mobile col-span-4 box">
+                <img src="images/xray_mob.jpg" alt="X ray view of ear bud">
+            </div>
         </section>
 
         <section class="grid-con">
-            <h2 class="hidden">video </h2>
-            <div class="col-span-4 l-col-span-12 xl-col-span-12 box"> gif / loop video with motion graphics / play or
-                pause function</div>
+            <h2 class="hidden">Text </h2>
+            <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box" id="overview">
+                <h3>What Makes Us different?</h3>
+            </div>
+        </section>
+
+
+        <section class="grid-con" id="specs">
+            <h2 class="hidden">Comparison</h2>
+            <div class="col-span-4 m-col-span-5 l-col-span-5 xl-col-span-5 box">
+                <img src="images/5.jpg" alt="feature">
+
+            </div>
+            <div class="col-span-4 m-col-span-2 l-col-span-2 xl-col-span-2 box">
+                <p>12 Hours Lifespan</p>
+                <p>Tracking Technology</p>
+                <p>Noise Absorption</p>
+                <p>Wireless Charge</p>
+                <p>Comfortable Wear</p>
+            </div>
+            <div class="col-span-4 m-col-span-5 l-col-span-5 xl-col-span-5 box">
+                <img src="images/4.jpg" alt="feature">
+            </div>
         </section>
 
         <section class="grid-con">
             <h2 class="hidden">Viewport images</h2>
-            <div class="col-span-2 l-col-span-3 xl-col-span-3 box"> Image with different viewport </div>
-            <div class="col-span-2 l-col-span-3 xl-col-span-3 box"> Image with different viewport </div>
-            <div class="col-span-2 l-col-span-3 xl-col-span-3 box"> Image with different viewport </div>
-            <div class="col-span-2 l-col-span-3 xl-col-span-3 box"> Image with different viewport </div>
+            <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box">
+                <h3>See it from different Views</h3>
+            </div>
+            <div class="col-span-2 m-col-span-3 l-col-span-3 xl-col-span-3 box"> <img src="images/b.jpg"
+                    alt="viewport image"> </div>
+            <div class="col-span-2 m-col-span-3 l-col-span-3 xl-col-span-3 box"> <img src="images/a.jpg"
+                    alt="viewport image"> </div>
+            <div class="col-span-2 m-col-span-3 l-col-span-3 xl-col-span-3 box"> <img src="images/c.jpg"
+                    alt="viewport image"> </div>
+            <div class="col-span-2 m-col-span-3 l-col-span-3 xl-col-span-3 box"> <img src="images/d.jpg"
+                    alt="viewport image"> </div>
         </section>
 
-        <section class="grid-con">
-            <h2 class="hidden">Comparison</h2>
-            <div class="col-span-4 l-col-span-4 xl-col-span-4 box"> comparative feature description
 
-            </div>
-            <div class="col-span-4 l-col-span-4 xl-col-span-4 box"> comparative feature description
-
-            </div>
-            <div class="col-span-4 l-col-span-4 xl-col-span-4 box"> comparative feature description
-
-            </div>
-        </section>
 
         <section class="grid-con">
             <h2 class="hidden">Color variant</h2>
-            <div class="col-span-4 l-col-span-5 xl-col-span-5 box"> variants of color
+            <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box">
+                <h3>Available in Variants</h3>
             </div>
-            <div class="col-span-4 l-col-span-2 xl-col-span-2 box"> description</div>
-            <div class="col-span-4 l-col-span-5 xl-col-span-5 box"> variants of color</div>
+            <div class="col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 box colorv">
+                <img src="images/white.jpg" alt="white">
+                <p>Golden Elegance</p>
+            </div>
+            <div class="col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 box colorv">
+                <img src="images/black.jpg" alt="black">
+                <p>Black Opulence</p>
+            </div>
+            <div class="col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 box colorv">
+                <img src="images/blue.jpg" alt="blue">
+                <p>Blue Serenity</p>
+            </div>
         </section>
 
 
         <section class="grid-con">
             <h2 class="hidden">Buy now </h2>
-            <div class="col-span-2 l-col-span-6 xl-col-span-6 box"> mock up with phone device and </div>
-            <div class="col-span-2 l-col-span-6 xl-col-span-6 box"> some promo text on scroll reveal</div>
-            <div class="col-span-4 l-col-start-4 l-col-end-10 xl-col-start-4 xl-col-end-10 box"> Buy Now Button
+            <div class="col-span-4 m-col-span-8 l-col-span-8 xl-col-span-8 box">
+                <img src="images/3.jpg" alt="purchase">
+            </div>
+            <div class="col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 box" id="buy">
+                <h3>FEEL THE SOUND LIKE NEVER BEFORE</h3>
+                <button class="button"> BUY NOW </button>
             </div>
         </section>
     </main>
 
 
+
+
+
+
+
+
+
+
     <footer class="grid-con">
         <h2 class="hidden"> Footer </h2>
-        <div class="col-span-4 l-col-span-12 xl-col-span-12 box"> footer image</div>
+        <div class="col-span-4 l-col-span-4 xl-col-span-4 box">
+            <h4>STEP INTO OUR WORLD</h4>
+            <p>About Us</p>
+            <p>Contact Us</p>
+            <p>Policiess</p>
+            <p>Social Handles</p>
+        </div>
+        <div class="col-span-4 l-col-span-4 xl-col-span-4 box">
+            <h4>FOLLOW, SHARE AND CONNECT </h4>
+            <p> Privacy Policy</p>
+            <p> Terms of Service</p>
+            <p> FAQs</p>
+        </div>
+        <div class="col-span-4 l-col-span-4 xl-col-span-4 box">
+            <h4>YOUR JOURNEY WITH US CONTINUES</h4>
+            <p> Subscribe to Newsletter</p>
+            <p> Connect with Us</p>
+            <p> Product guide </p>
+            <p> Reviews</p>
+
+        </div>
     </footer>
 
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
