@@ -25,6 +25,7 @@ Sonic Zen introduces a new era of earbud technology, designed to deliver an unpa
 ## Version / History
 
 - **1.0:** Layout with a responsive grid system.
+- **2.0:** Integrated code with js and saas.
 
 ## How to Use
 
