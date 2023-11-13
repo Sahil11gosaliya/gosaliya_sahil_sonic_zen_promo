@@ -1,15 +1,10 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-}
-
-h2, p {
-  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
 }
 
 #imageCon {
   position: relative;
-  max-width: auto;
+  max-width: 100%;
   height: 90vh;
 }
 
@@ -17,6 +12,7 @@ h2, p {
   position: absolute; /*images are stacked in order via absolute*/
   left: 0;
   right: 0;
+  max-width: 100%;
   height: 90vh;
 }
 
@@ -36,7 +32,7 @@ h2, p {
 }
 
 .image-drag {
-  background-color: #666;
+  background-color: #666666;
   left: 50%; /*match up with image left*/
   width: 4px; /*orig 49*/
   cursor: pointer;
@@ -47,7 +43,6 @@ model-viewer {
   max-width: 1200px;
   height: 700px;
   margin: 0 auto;
-  background-image: url("../images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -101,11 +96,6 @@ model-viewer {
 
 .HotspotAnnotation img {
   margin-left: 20px;
-}
-
-model-viewer::part(default-progress-bar) {
-  height: 30px;
-  background-color: #2070e9;
 }
 
 /* AR Rules */
@@ -177,4 +167,74 @@ model-viewer > #ar-prompt > img {
 #explode-view {
   max-width: 100%;
   /* width: 100vw; */
+}
+
+header, footer, body {
+  background-color: rgba(255, 255, 255, 0.951);
+  font-size: 35px;
+}
+
+p, h2, h3, h4, h4, h6 {
+  text-align: left;
+}
+
+header, footer, body p, a {
+  font-size: 20px;
+}
+
+header h3 {
+  text-align: center;
+  font-size: 30px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
+a {
+  text-decoration: none;
+  outline: none; /* Optional: to remove the hyperlink highlight */
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.hammenu {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menu-close img {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .menu-open img,
+  .menu-close img {
+    height: 30px;
+    width: 30px;
+  }
+}
+body {
+  scroll-behavior: smooth;
 }/*# sourceMappingURL=main.css.map */

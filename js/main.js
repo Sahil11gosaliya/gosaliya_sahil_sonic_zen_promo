@@ -1,25 +1,4 @@
-(() => {
-  console.log("IIFE Fired");
-
-  // Masonry Grid
-
-  // Hamburger Menu
-  const hamMenu = document.querySelector('.ham');
-  const hamIconOpen = document.querySelector('.menu-open');
-  const hamIconClose = document.querySelector('.menu-close');
-
-  hamMenu.style.display = 'none';
-
-  hamIconOpen.addEventListener('click', function () {
-    hamMenu.style.display = 'block';
-  });
-
-  hamIconClose.addEventListener('click', function () {
-    hamMenu.style.display = 'none';
-  });
-})();
-
-
+//x-ray
 (() => {
   (function () {
     "use strict";
@@ -82,6 +61,7 @@
 })();
 
 
+//model viewer
 
 (() => {
   console.log("IIFE Fired");
@@ -176,7 +156,7 @@
 
 
 
-
+//exploded view
 (() => {
 
   const canvas = document.querySelector("#explode-view");
@@ -207,7 +187,7 @@
 
     //need to recreate the string: imges/explode_0001.webp
 
-    img.src = `images/animation/Downloads_${(i + 1).toString().padStart(4, '0')}.jpg`;
+    img.src = `images/animation/Downloads${(i + 1).toString().padStart(4, '0')}.jpg`;
     images.push(img);
 
   }
@@ -224,7 +204,7 @@
       pin: true,
       scrub: 1,
       start: "top top",
-      markers: true
+      markers: false
 
     },
     onUpdate: render
@@ -244,6 +224,31 @@
 
 
 
+})();
+
+
+
+//hammenu
+(() => {
+  const mobileNavToggle = document.querySelector('.menu-open');
+  const mobileNavClose = document.querySelector('.menu-close');
+  const mobileNav = document.querySelector('.hammenu');
+  const dropImage = document.querySelector('.menu-open img');
+  const closeImage = document.querySelector('.menu-close img');
+
+  mobileNavToggle.addEventListener('click', () => {
+    mobileNav.style.opacity = '1';
+    mobileNav.style.pointerEvents = 'auto';
+    dropImage.style.display = 'none';
+    closeImage.style.display = 'block';
+  });
+
+  mobileNavClose.addEventListener('click', () => {
+    mobileNav.style.opacity = '0';
+    mobileNav.style.pointerEvents = 'none';
+    dropImage.style.display = 'block';
+    closeImage.style.display = 'none';
+  });
 })();
 
 
