@@ -252,3 +252,26 @@
 })();
 
 
+//color change
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    // Get all color boxes
+    const colorBoxes = document.querySelectorAll('.color-box');
+
+    // Get the main image element
+    const mainImage = document.getElementById('mainImage');
+
+    // Function to change the main image source
+    function changeImage(newSrc) {
+      mainImage.src = newSrc;
+    }
+
+    // Add click event listeners to each color box
+    colorBoxes.forEach(colorBox => {
+      colorBox.addEventListener('click', function () {
+        const newSrc = colorBox.querySelector('img').src;
+        changeImage(newSrc);
+      });
+    });
+  })();
+})();
